@@ -31,13 +31,13 @@ apt-fast   update && apt-fast  upgrade
 echo "Installing Tmux"
 sudo apt update
 
-sudo apt install -y git
-
-sudo apt install -y automake
-sudo apt install -y build-essential
-sudo apt install -y pkg-config
-sudo apt install -y libevent-dev
-sudo apt install -y libncurses5-dev
+#sudo apt install -y git
+echo "Installing build essentials"
+sudo apt-fast install -y automake
+sudo apt-fast install -y build-essential
+sudo apt-fast install -y pkg-config
+sudo apt-fast install -y libevent-dev
+sudo apt-fast install -y libncurses5-dev
 
 rm -fr /tmp/tmux
 
