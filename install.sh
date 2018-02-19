@@ -14,7 +14,7 @@ fi
  apt install -y nodejs
 
 #Install apt-fast
-echo"Installing apt-fast"
+echo "Installing apt-fast"
  add-apt-repository ppa:apt-fast/stable
  apt-get update
  apt-get -y install apt-fast
