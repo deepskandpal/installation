@@ -8,6 +8,11 @@ else
  echo "Updating and Upgrading"
  apt-get update && sudo apt-get upgrade -y
 fi
+
+ #Installing curl 
+ echo "Installing curl"
+ apt install  curl
+
  #Install Nodejs
  echo "Installing Nodejs"
  curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
