@@ -12,3 +12,13 @@ fi
  echo "Installing Nodejs"
  curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
  apt install -y nodejs
+
+#Install apt-fast
+echo"Installing apt-fast"
+ add-apt-repository ppa:apt-fast/stable
+ apt-get update
+ apt-get -y install apt-fast
+
+#Install git 
+echo "Installing git "
+apt-fast install git
