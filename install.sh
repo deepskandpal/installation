@@ -22,3 +22,7 @@ echo"Installing apt-fast"
 #Install git 
 echo "Installing git "
 apt-fast install git
+
+#updatin and  upgrading using apt-fast
+echo "updating and upgrading"
+apt-fast   update && apt-fast  upgrade
