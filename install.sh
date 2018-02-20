@@ -59,3 +59,8 @@ fi
  cd -
 
  rm -fr /tmp/tmux
+
+ #Installing atom
+ echo"Installing atom"
+ sudo add-apt-repository ppa:webupd8team/atom
+ sudo apt-fast update; sudo apt-fast install atom 
