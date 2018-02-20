@@ -9,22 +9,22 @@ else
  apt-get update && sudo apt-get upgrade -y
 fi
 
- #Install apt-fast                                                                              │                                                                                              
- echo "Installing apt-fast"                                                                     │                                                                                              
- add-apt-repository ppa:apt-fast/stable                                                        │                                                                                              
- apt-get update                                                                                │                                                                                              
- apt-get -y install apt-fast 
- 
-#Installing curl 
+ #Install apt-fast
+ echo "Installing apt-fast"
+ add-apt-repository ppa:apt-fast/stable
+ apt-get update
+ apt-get -y install apt-fast
+
+#Installing curl
  echo "Installing curl"
- apt install  curl
+ apt-fast install  curl
 
  #Install Nodejs
  echo "Installing Nodejs"
  curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
  apt-fast install -y nodejs
 
- #Install git 
+ #Install git
  echo "Installing git "
  apt-fast install git
 
