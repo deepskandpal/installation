@@ -67,4 +67,15 @@ fi
 
  #Installing truffle
   echo "Installing truffle"
-  npm install -g truffle 
+  npm install -g truffle
+
+ #Installing ganache
+ echo "Installing ganache"
+ cd ~/deepanshu/Download
+ echo "Cloning repository"
+ git clone https://github.com/trufflesuite/ganache.git; cd ganache
+ echo "Building from source"
+ npm install
+ npm start
+ npm run build-linux
+ 
