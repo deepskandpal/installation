@@ -79,3 +79,12 @@ fi
 # npm start
 # npm run build-linux
    
+#Installing MAC ubuntu 
+ echo "Installing Mac ubuntu"
+  add-apt-repository ppa:noobslab/macbuntu
+  apt-fast update
+  apt-fast install macbuntu-os-icons-lts-v7
+  apt-fast install macbuntu-os-ithemes-lts-v7
+  apt-fast install albert
+  apt-fast install unity-tweak-tool
+
