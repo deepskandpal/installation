@@ -14,8 +14,14 @@ fi
  add-apt-repository ppa:apt-fast/stable
  apt-get update
  apt-get -y install apt-fast
+ 
+ #Installing Zsh and oh my ZSH
+  sudo apt-fast install zsh
 
-#Installing curl
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  chsh -s /bin/zsh
+  
+ #Installing curl
  echo "Installing curl"
  apt-fast install  curl
 
@@ -56,11 +62,15 @@ fi
 
  sudo make install
 
- cd -
+  cd -
 
- rm -fr /tmp/tmux
+  rm -fr /tmp/tmux
+  
+  cd 
+  wget "https://raw.githubusercontent.com/deepskandpal/dot-files/master/.tmux.conf"
 
- #Installing atom
+ 
+#Installing atom
  echo "Installing atom"
  sudo add-apt-repository ppa:webupd8team/atom
  sudo apt-fast update; sudo apt-fast install atom
