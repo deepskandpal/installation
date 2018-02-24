@@ -17,8 +17,14 @@ fi
  
  #Installing Zsh and oh my ZSH
   sudo apt-fast install zsh
+<<<<<<< HEAD
   chsh -s /bin/zsh  
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+=======
+
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  chsh -s /bin/zsh
+>>>>>>> 204c1a37b1176d36c444559065d33878a6d863fe
   
  #Installing curl
  echo "Installing curl"
