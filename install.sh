@@ -6,7 +6,7 @@ if [[ $EUID -ne 0 ]]; then
 else
  #Update and Upgrade
  echo "Updating and Upgrading"
- apt-get update 
+ apt-get update
 fi
 
  #Install apt-fast
@@ -70,11 +70,12 @@ fi
   npm install -g truffle
 
  #Installing ganache
- echo "Installing ganache"
- cd ~/Downloads
- echo "Cloning repository"
- git clone https://github.com/trufflesuite/ganache.git; cd ganache
- echo "Building from source"
- npm install
- npm start
- npm run build-linux
+# echo "Installing ganache"
+# cd ~/Downloads
+# echo "Cloning repository"
+# git clone https://github.com/trufflesuite/ganache.git; cd ganache
+# echo "Building from source"
+# npm install
+# npm start
+# npm run build-linux
+   
