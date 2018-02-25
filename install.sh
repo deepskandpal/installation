@@ -83,7 +83,6 @@ fi
   git clone https://github.com/trufflesuite/ganache.git; cd ganache
   echo "Building from source"
   npm install
-  npm start
   npm run build-linux
    
 #Installing MAC ubuntu 
