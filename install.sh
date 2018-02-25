@@ -56,15 +56,15 @@ fi
   apt-fast install -y libevent-dev
   apt-fast install -y libncurses5-dev
 
- rm -fr /tmp/tmux
- git clone https://github.com/tmux/tmux.git /tmp/tmux
- cd /tmp/tmux
- sh autogen.sh
- ./configure && make
- sudo make install
- cd -
- rm -fr /tmp/tmux
- cd 
+  rm -fr /tmp/tmux
+  git clone https://github.com/tmux/tmux.git /tmp/tmux
+  cd /tmp/tmux
+  sh autogen.sh
+  ./configure && make
+  sudo make install
+  cd -
+  rm -fr /tmp/tmux
+  cd 
   wget "https://raw.githubusercontent.com/deepskandpal/dot-files/master/.tmux.conf"
  
  #Installing atom
@@ -85,14 +85,14 @@ fi
   npm install
   npm run build-linux
    
-#Installing MAC ubuntu 
- echo "Installing Mac ubuntu"
-  add-apt-repository ppa:noobslab/macbuntu
-  apt-fast update
-  apt-fast install macbuntu-os-icons-lts-v7
-  apt-fast install macbuntu-os-ithemes-lts-v7
-  apt-fast install albert
-  apt-fast install unity-tweak-tool
+ #Installing MAC ubuntu 
+  echo "Installing Mac ubuntu"
+   add-apt-repository ppa:noobslab/macbuntu
+   apt-fast update
+   apt-fast install macbuntu-os-icons-lts-v7
+   apt-fast install macbuntu-os-ithemes-lts-v7
+   apt-fast install albert
+   apt-fast install unity-tweak-tool
 
  #Installing Virtual box
  echo"Installing virtual box"
@@ -100,4 +100,12 @@ fi
   wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
   apt-fast update
   apt-get install virtualbox-5.2
+
+ #some important repositories
+  mkdir Jio-Dapp ; cd Jio-Dapp
+  git clone https://github.com/deepskandpal/Ethereum-Voting-app.git
+  cd
+  mkdir Quorum ; cd Quorum
+  git clone https://github.com/jpmorganchase/quorum-examples
+  cd
 
