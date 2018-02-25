@@ -33,10 +33,17 @@ fi
  echo "Installing git "
  apt-fast install git
 
- #updatin and  upgrading using apt-fast
+ #updating and  upgrading using apt-fast
  echo "updating and upgrading"
  apt-fast   update && apt-fast  upgrade
-
+ 
+ #Installing chrome stable
+ echo "Installing Chrome"
+ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list 
+ sudo apt-fast update
+ sudo apt-get install google-chrome-stable 
+ 
  #Tmux installation and configuration
  echo "Installing Tmux"
  sudo apt update
