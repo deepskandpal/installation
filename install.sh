@@ -86,14 +86,14 @@ fi
   npm install -g truffle
 
  #Installing ganache
-# echo "Installing ganache"
-# cd ~/Downloads
-# echo "Cloning repository"
-# git clone https://github.com/trufflesuite/ganache.git; cd ganache
-# echo "Building from source"
-# npm install
+  echo "Installing ganache"
+  cd Downloads
+  echo "Cloning repository"
+  git clone https://github.com/trufflesuite/ganache.git; cd ganache
+  echo "Building from source"
+  npm install
 # npm start
-# npm run build-linux
+  npm run build-linux
    
 #Installing MAC ubuntu 
  echo "Installing Mac ubuntu"
