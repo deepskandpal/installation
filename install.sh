@@ -5,7 +5,7 @@ if [[ $EUID -ne 0 ]]; then
  exit 1
 else
  #Update and Upgrade
- echo "Updating and Upgrading"
+ echo "Updating "
  apt-get update
 fi
 
@@ -28,7 +28,7 @@ fi
  echo "Installing Nodejs"
  curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
  apt-fast install -y nodejs
-
+ npm install npm@latest -g
  #Install git
  echo "Installing git "
  apt-fast install git
@@ -46,7 +46,7 @@ fi
  
  #Tmux installation and configuration
  echo "Installing Tmux"
- sudo apt update
+ sudo apt-fast update
 
  #sudo apt install -y git
  echo "Installing build essentials"
@@ -57,26 +57,17 @@ fi
   apt-fast install -y libncurses5-dev
 
  rm -fr /tmp/tmux
-
  git clone https://github.com/tmux/tmux.git /tmp/tmux
-
  cd /tmp/tmux
-
  sh autogen.sh
-
  ./configure && make
-
  sudo make install
-
-  cd -
-
-  rm -fr /tmp/tmux
-  
-  cd 
+ cd -
+ rm -fr /tmp/tmux
+ cd 
   wget "https://raw.githubusercontent.com/deepskandpal/dot-files/master/.tmux.conf"
-
  
-#Installing atom
+ #Installing atom
  echo "Installing atom"
  sudo add-apt-repository ppa:webupd8team/atom
  sudo apt-fast update; sudo apt-fast install atom
@@ -92,7 +83,7 @@ fi
   git clone https://github.com/trufflesuite/ganache.git; cd ganache
   echo "Building from source"
   npm install
-# npm start
+  npm start
   npm run build-linux
    
 #Installing MAC ubuntu 
